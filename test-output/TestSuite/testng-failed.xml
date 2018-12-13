@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
+  <test thread-count="2" name="Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="test.java.SignupTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testSignup"/>
+        </methods>
+      </class> <!-- test.java.SignupTest -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
+  <test thread-count="2" name="Edge(failed)" parallel="tests">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="test.java.SignupTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testSignup"/>
+        </methods>
+      </class> <!-- test.java.SignupTest -->
+    </classes>
+  </test> <!-- Edge(failed) -->
+  <test thread-count="2" name="Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="test.java.SignupTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testSignup" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- test.java.SignupTest -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
